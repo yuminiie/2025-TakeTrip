@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TakeTrip</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('작품별/배우별 명소 탐색.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#LogoButton {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+
+#AIoption {
+    position: absolute;
+    top: 190px;
+    right: 560px;
+    width: 917.5px;
+   
+    filter: drop-shadow(0 3px 3px rgb(76, 166, 199));
+}
+
+#searchBar {
+    position: absolute;
+    top: 50px;      
+    left: 60px;
+    width: 548px;
+    height: 71px;
+    padding: 0px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #D1EFFF;
+    margin-left: 200px;
+    margin-top: -35px;
+
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+#searchBar:focus, #searchBar:active {
+    border: solid 2px #0084FF;
+    border-color: #0084FF;
+    transition: all 0.05s ease;
+}
+#searchBar::placeholder {
+    color: gray;
+}
+.box{
+    position: absolute;
+    width: 20%;
+    margin-right: 50px;
+    margin-top: 130px;
+    margin-left: 120px;
+    filter: drop-shadow(0 3px 3px rgb(160, 222, 245));
+}
+
+#TitleSearchBar{
+    padding-left: 10px;
+    margin-bottom: 140px;
+    border-radius: 30px;
+    background-color: #D1EFFF;
+    width: 350px;
+    height: 45px;
+    border: none;
+    outline: none;
+
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+#ActorSearchBar{
+    padding-left: 10px;
+    border-radius: 30px;
+    background-color: #D1EFFF;
+    width: 350px;
+    height: 45px;
+    border: none;
+    outline: none;
+
+    box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+#TitleSearchBar:focus,
+#TitleSearchBar:active,
+#ActorSearchBar:focus,  
+#ActorSearchBar:active {
+    outline: none;
+    border: 2px solid #0084FF; 
+    transition: all 0.05s ease;
+}
+
+#detail_search{
+    position: absolute;
+    top: 290px;
+    left: 125px;
+}
+/*
+@media (max-width: 900px) {
+    #main_area {
+        flex-direction: column;
+        align-items: center;
+    }
+    #AIoption {
+        max-width: 90%;
+    }
+    #detail_search {
+        width: 90%;
+    }
+}
+*/
+
+
+</style>
+</head>
+<body>
+<form action="#">
+    <a href="TakeTrip_main.html">
+        <img src="작품별/TakeTrip.svg" alt="로고" width="170px" id="LogoButton">
+    </a>
+    <div id="center_element">
+        <img src="작품별/AI 추천 관광리스트.svg" alt="AI 추천 관광리스트" id="AIoption" class="centerBox">
+
+        <div id="detail_search_form">
+            <img src="작품별/Frame 10.svg" alt="작품 검색" id="searchTitleBG" class="centerBox">
+            <div id="detail_search">
+                <input type="search" id="TitleSearchBar" placeholder="검색어를 입력하세요"><br><br>
+                <input type="search" id="ActorSearchBar" placeholder="검색어를 입력하세요">
+            </div>
+        </div>
+    </div>    
+
+    <!--메인 검색창-->
+    <input type="search" id="searchBar" placeholder="검색어를 입력하세요">
+</form>
+</body>
+</html>
